@@ -82,7 +82,7 @@ public class PointOfSale {
 	
 	private void initialize() {
 		frame = new JFrame();
-		icon=new ImageIcon("C:\\Users\\HP\\Downloads\\bazenga.png.jpg");
+		icon=new ImageIcon("define your file path here");
 		
 		frame.setIconImage(icon.getImage());
 		frame.setBounds(100, 100, 700, 600);
@@ -148,7 +148,7 @@ public class PointOfSale {
 			public void keyReleased(KeyEvent e) {
 				try {
 					Class.forName("com.mysql.cj.jdbc.Driver");
-		        	 Connection conn=DriverManager.getConnection(url,"root","");
+		        	 Connection conn=DriverManager.getConnection("make your database connection parameters present here");
 		        	String number=itemField.getText();
 		        	 PreparedStatement stm = conn.prepareStatement("select id, barcode ,Product,UnitPrice from ProdTable where barcode=?");
 		        	stm .setString(1,number);
